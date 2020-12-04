@@ -11,9 +11,9 @@ if !hasmapto('<Plug>StataRun')
 endif
 
 function! s:stata_run()
-	! zsh open_stata.zsh
+	! zsh ~/.vim/plugged/stata_run/plugin/open_stata.zsh
 
 	'<,'> y
 
-	! zsh copy_stata.zsh
+	! zsh ~/.vim/plugged/stata_run/plugin/copy_stata.zsh
 endfunction
