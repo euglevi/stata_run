@@ -5,7 +5,7 @@
 
 
 command -range -bar -nargs=0 StataRun call s:stata_run()
-noremap <unique> <script> <silent> <Plug>StataRun :<c-u>call stata_run()<c-r>
+noremap <unique> <script> <silent> <Plug>StataRun :<c-u>StataRun<cr>
 
 map <unique> <silent>  <c-z><c-z> <Plug>StataRun
 
