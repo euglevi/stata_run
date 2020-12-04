@@ -5,10 +5,9 @@
 
 
 command -range -bar -nargs=0 StataRun call s:stata_run()
+noremap <unique> <script> <silent> <Plug>StataRun :<c-u>call s:stata_run()<c-r>
 
-if !hasmapto('<Plug>StataRun')
-		map <c-z><c-z> <Plug>StataRun
-endif
+map <unique> <silent>  <c-z><c-z> <Plug>StataRun
 
 function! s:stata_run()
 	! zsh ~/.vim/plugged/stata_run/plugin/open_stata.zsh
