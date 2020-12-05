@@ -19,5 +19,5 @@ function! s:stata_run()
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/copy_stata.zsh
 endfunction
 
-command -range -bar -nargs=0 StataRun call s:stata_run()
+command -range -bar -nargs=0 '<,'>StataRun call s:stata_run()
 
