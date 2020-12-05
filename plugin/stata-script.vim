@@ -3,7 +3,7 @@
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if !hasmapto('<Plug>StataRun')
-	smap <unique> <c-z><c-x> <Plug>(StataRun)
+	xmap <unique> <c-z><c-x> <Plug>(StataRun)
 endif
 
 noremap <unique> <script> <silent> <Plug>(StataRun) <SID>stata_run
@@ -20,5 +20,5 @@ function! s:stata_run()
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/copy_stata.zsh
 endfunction
 
-command -range -bar -nargs=0 '<,'>StataRun call s:stata_run()
+command -range -bar -nargs=0 StataRun call s:stata_run()
 
