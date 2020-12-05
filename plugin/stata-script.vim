@@ -11,7 +11,7 @@ xnoremap <unique> <script> <silent> <Plug>(StataRun) :<c-u> call <SID>stata_run(
 function! s:stata_run()
 
 	if system('pgrep -x xstata-se') == ""
-		! xstata-se
+		silent ! xstata-se
 	endif
 
 	'<,'> y
