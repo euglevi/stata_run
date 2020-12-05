@@ -6,7 +6,8 @@ if !hasmapto('<Plug>StataRun')
 	vmap <unique> <c-z><c-z> <Plug>(StataRun)
 endif
 
-vnoremap <unique> <script> <silent> <Plug>(StataRun) :call <SID>stata_run()<CR>
+vnoremap <unique> <script> <silent> <Plug>(StataRun) <SID>stata_run
+vnoremap <SID>stata_run :call <SID>stata_run()<CR>
 
 function! s:stata_run()
 
