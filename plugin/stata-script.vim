@@ -11,9 +11,9 @@ xnoremap <unique> <script> <silent> <Plug>(StataRun) :<c-u> call <SID>stata_run(
 function! s:stata_run()
 
 	if system('pgrep -x xstata-se') == ""
-		silent ! this_window = "$(xdotool getactivewindow)" &&
+		let g:this_window = system('xdotool getactivewindow')
 		silent ! xstata-se
-		silent ! xdotool windowactivate --sync $this_window
+		exe "silent !xdotool windowactivate --sync".g:this_window
 	endif
 
 	'<,'> y
