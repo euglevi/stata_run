@@ -10,7 +10,9 @@ noremap <unique> <script> <silent> <Plug>StataRun :<c-u>StataRun<cr>
 map <unique> <silent>  <c-z><c-z> <Plug>StataRun
 
 function! s:stata_run()
-	! zsh ~/.vim/plugged/stata_run/plugin/open_stata.zsh
+	execute "silent !if [ "$(pgrep -x xstata-se)" = "" ]; then 
+		 xstata-se
+	fi"
 
 	'<,'> y
 
