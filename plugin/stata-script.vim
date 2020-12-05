@@ -3,7 +3,7 @@
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if !hasmapto('<Plug>StataRun')
-	vmap <unique>  <Leader>z <Plug>(StataRun)
+	vmap <unique> <c-z><c-z> <Plug>(StataRun)
 endif
 
 vnoremap <unique> <script> <silent> <Plug>(StataRun) :call <SID>stata_run()<CR>
