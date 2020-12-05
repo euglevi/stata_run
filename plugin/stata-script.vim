@@ -13,10 +13,10 @@ function! s:stata_run()
 	let g:this_window = system('xdotool getactivewindow')
 
 	if system('pgrep -x xstata-se') == ""
-		silent ! xstata-se
+		exe "silent ! xstata-se && xdotool windowactivate --sync ".g:this_window
+		
 	endif
 
-	exe "silent !xdotool windowactivate --sync ".g:this_window
 	'<,'> y
 
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/copy_stata.zsh
