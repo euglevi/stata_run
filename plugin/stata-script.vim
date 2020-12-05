@@ -13,7 +13,7 @@ function! s:stata_run()
 	if system('pgrep -x xstata-se') == ""
 		let g:this_window = system('xdotool getactivewindow')
 		silent ! xstata-se
-		exe "silent !xdotool windowactivate --sync".g:this_window
+		exe "silent !xdotool windowactivate --sync ".g:this_window
 	endif
 
 	'<,'> y
