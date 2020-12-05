@@ -9,5 +9,5 @@ fi
 
 xdotool \
 	keyup ctrl shift \
-	sleep 2 \
+	sleep 1 \
 	windowactivate --sync $this_window
