@@ -12,7 +12,7 @@ map <unique> <silent>  <c-z><c-z> <Plug>StataRun
 function! s:stata_run()
 
 	if system('pgrep -x xstata-se') == ""
-		! xstata-se
+		silent ! xstata-se
 	endif
 
 	'<,'> y
