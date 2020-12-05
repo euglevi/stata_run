@@ -7,4 +7,7 @@ if [ "$(pgrep -x xstata-se)" = "" ]; then
 	 xstata-se
 fi
 
-xdotool windowactivate --sync $this_window
+xdotool \
+	keyup ctrl shift \
+	sleep 2 \
+	windowactivate --sync $this_window
