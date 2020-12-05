@@ -6,8 +6,7 @@ if !hasmapto('<Plug>StataRun')
 	xmap <unique> <c-z><c-x> <Plug>(StataRun)
 endif
 
-noremap <unique> <script> <silent> <Plug>(StataRun) <SID>stata_run
-noremap <SID>stata_run :call <SID>stata_run()<CR>
+xnoremap <unique> <script> <silent> <Plug>(StataRun) :<c-u> call <SID>stata_run()<CR>
 
 function! s:stata_run()
 
