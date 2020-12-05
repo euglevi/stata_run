@@ -4,6 +4,7 @@
 
 if !hasmapto('<Plug>StataRun')
 	map <unique>  <Leader>z <Plug>(StataRun)
+endif
 
 noremap <unique> <script> <silent> <Plug>(StataRun) :call <SID>stata_run()<CR>
 
