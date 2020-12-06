@@ -1,13 +1,13 @@
 
 #!/usr/bin/zsh
 
-this_window="$(xdotool getactivewindow)" &&
 
 if [ "$(pgrep -x xstata-se)" = "" ]; then 
-	 xstata-se
+	this_window="$(xdotool getactivewindow)" &&
+	xstata-se
+	xdotool \
+		keyup ctrl shift \
+		sleep 1 \
+		windowactivate --sync $this_window
 fi
 
-xdotool \
-	keyup ctrl shift \
-	sleep 1 \
-	windowactivate --sync $this_window
