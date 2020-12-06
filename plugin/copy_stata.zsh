@@ -6,7 +6,7 @@ this_window="$(xdotool getactivewindow)" &&
 xdotool \
         keyup ctrl shift \
 	sleep 2 \
-        windowactivate $stata_window \
+        windowactivate --sync $stata_window \
         key --clearmodifiers --delay 100 ctrl+v Return \
-        windowactivate $this_window \
-        key --clearmodifiers --delay 10 gg V G Escape\
+        windowactivate --sync $this_window \
+        key --clearmodifiers --delay 10 gg V G Escape
