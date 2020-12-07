@@ -5,8 +5,9 @@ stata_window="$(xdotool search --name --limit 1 "Stata/(IC|SE|MP)")"
 this_window="$(xdotool getactivewindow)" 
 xdotool \
         keyup ctrl shift \
-	sleep 2 \
+	sleep 1 \
         windowactivate --sync $stata_window \
         key --clearmodifiers --delay 100 ctrl+v Return \
         windowactivate --sync $this_window \
-        key --clearmodifiers --delay 100 Escape
+        key --clearmodifiers --delay 100 Escape g g V G Escape \
+	sleep 2
