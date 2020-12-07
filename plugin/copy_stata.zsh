@@ -2,12 +2,11 @@
 #!/usr/bin/zsh
 
 stata_window="$(xdotool search --name --limit 1 "Stata/(IC|SE|MP)")" 
-this_window="$(xdotool getactivewindow)" &&
+this_window="$(xdotool getactivewindow)" 
 xdotool \
         keyup ctrl shift \
 	sleep 2 \
         windowactivate --sync $stata_window \
         key --clearmodifiers --delay 100 ctrl+v Return \
         windowactivate --sync $this_window \
-	sleep 2 \
         key --clearmodifiers --delay 100 g g V G Escape
