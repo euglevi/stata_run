@@ -17,6 +17,7 @@ function! s:stata_run()
 	'<,'> y
 
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/copy_stata.zsh
+	exe 'sleep 1'
 	redraw
 	exe s:start_line
 

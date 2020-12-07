@@ -9,4 +9,5 @@ xdotool \
         windowactivate --sync $stata_window \
         key --clearmodifiers --delay 100 ctrl+v Return \
         windowactivate --sync $this_window \
-        key --clearmodifiers --delay 100 Escape g g V G Escape 
+	sleep 2
+       # key --clearmodifiers --delay 100 Escape g g V G Escape 
