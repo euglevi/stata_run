@@ -14,7 +14,7 @@ function! s:stata_run()
 	"echo s:start_line
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/open_stata.zsh
 
-	'<,'>w ~/vim_stata.do 
+	'<,'>w ~/t.do 
 
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/copy_stata.zsh
 	redraw!
