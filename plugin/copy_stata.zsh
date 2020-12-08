@@ -6,6 +6,7 @@ this_window="$(xdotool getactivewindow)"
 xdotool \
         keyup ctrl shift \
         windowactivate --sync $stata_window \
-        type --clearmodifiers --delay 100 'do /home/eugenio/vim-stata.do' \
+        type --clearmodifiers --delay 10 'do ~/vim_stata.do' \
+	key --clearmodifiers --delay 100 Enter \
         windowactivate --sync $this_window 
         #key --clearmodifiers --delay 100 Escape g g V G Escape 
