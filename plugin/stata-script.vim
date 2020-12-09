@@ -10,15 +10,12 @@ xnoremap <unique> <script> <silent> <Plug>(StataRun) :<c-u> call <SID>stata_run(
 
 function! s:stata_run()
 	
-	"let s:start_line = line('v') 
-	"echo s:start_line
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/open_stata.zsh
 
 	'<,'>w ~/t.do 
 
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/copy_stata.zsh
 	redraw!
-	"exe s:start_line
 
 endfunction
 
