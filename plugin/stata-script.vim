@@ -12,7 +12,7 @@ function! s:stata_run()
 	
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/open_stata.zsh
 
-	'<,'>w ~/t.do 
+	'<,'>w! ~/t.do 
 
 	silent ! zsh ~/.vim/plugged/stata_run/plugin/copy_stata.zsh
 	redraw!
