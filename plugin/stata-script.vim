@@ -3,7 +3,7 @@
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if !hasmapto('<Plug>StataRun')
-	xmap <F7> <Plug>(StataRun)
+	xmap <c-a><c-a> <Plug>(StataRun)
 endif
 
 xnoremap <unique> <script> <silent> <Plug>(StataRun) :<c-u> call <SID>stata_run()<CR>
