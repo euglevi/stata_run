@@ -6,7 +6,7 @@ command -range -bar -nargs=0 StataRun call s:stata_run()
 noremap <unique> <script> <silent> <Plug>(StataRun) :<c-u> call <SID>stata_run()<CR>
 
 if !hasmapto('<Plug>StataRun', 'x')
-	xmap <c-a><c-a> <Plug>(StataRun)
+	xnoremap <c-a><c-a> <Plug>(StataRun)
 endif
 
 function! s:stata_run()
